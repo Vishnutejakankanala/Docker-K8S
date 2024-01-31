@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deploy
+  labels:
+    app: myapp
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      name: my-pod
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: helloworld
+          image: karthequian/helloworld
+          ports:
+            - containerPort: 80
+
+
+
+#To create and excute deployment.yaml file (rs=replicaset)
+# kubectl create -f deployment.yaml  : To create deployment
+# kubectl get deploy : To List all deployments
+# kubectl get rs    : To list and check replicasets
+# kubectl get pods    : To list podes in the rs and deployment
+# kubectl decribe pod <podname>   : To show all info about pod image
+
+# kubectl get image deploy/my-deploy myapp-helloworld:2.0 : This command is used to update pods and deploy using CLI
+# kubectl rollout undo deploy/my-deploy : To get back to previous version.
