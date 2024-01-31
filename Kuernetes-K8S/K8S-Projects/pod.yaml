@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+  namespace: my-devops
+  labels:
+    app: myapp
+
+spec:
+  containers:
+    - name: mynginx
+      image: nginx
+
+
+
+#To create and excute pod.yaml file
+# kubectl create -f pod.yaml  : To create pod
+# kubectl get namespace  : To List all namespaces
+# kubectl decribe pod my-pod -n devops  : To inspect pod (n=namespace)
+# kubectl get pods -namespace <namespace name>   : To check podsin Namespace
+# kubectl delete pod <podname> -n devops  : To delete pod
+
+
