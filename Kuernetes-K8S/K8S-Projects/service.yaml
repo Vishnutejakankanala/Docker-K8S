@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+  selector:
+    app: myapp
+
+
+
+#To create and excute service.yaml file
+# kubectl create -f service.yaml  : To create service
+# kubectl get service : To List all service Name,Type, Cluster IP & External IP
+#open a new tab and enter external IP to check working or not (with :80 if not work).
