@@ -1,4 +1,4 @@
-		Docker setup on linux machine	
+# Docker setup on linux machine	
   ```
 sudo yum update		: To update os
 sudo yum install docker	: To install docker on linux
@@ -21,7 +21,7 @@ docker ps 		: To list docker container
 ```
 
 
-		To Create Docker File &	Image	
+# To Create Docker File & Image	
 ```
 sudo vi <Dockerfile> 	: To create docker file
 >>> In "Dockerfile" Instructions
@@ -46,7 +46,7 @@ sudo docker tag <imagename:version> <New name:version>	: To rename and copy the 
 ```
 
 
-		To create Docker Container	
+# To create Docker Container	
  ```
 sudo docker exec -it <imageid> /bin/bash : To enter into container
 ctrl+p & ctrl+q		: To come out from container for first time
@@ -63,7 +63,7 @@ sudo docker rm <cointainer id> 		: To delete container
 ```
 
 
-		To create Docker Registry	
+# To create Docker Registry	
 ```  
 In AWS - ECR-Elastic Container Registry
 In Azure - ACR-Azure Container Registry
@@ -82,7 +82,7 @@ docker pull <url in remote> 	: To download Docker image
 ```
 
 
-			To create Volumes	
+# To create Volumes	
 ```
 docker volume ls		: To list volumes
 docker volume create <name>	: To create volume
@@ -97,7 +97,7 @@ docker volume rm <name>		: To delete volume
 ```
 
 
-			Docker Networking	
+# Docker Networking	
 ```
 Refer from git Repo 	: /Docker-Zero-to-Hero/examples$
 docker run -d --name login nginx:latest	: To create container
@@ -112,12 +112,13 @@ docker network create secure-network	: To create secure network
 docker run -d --name finance --network=secure-network nginx:latest  : to secure finance container
 docker run -d --name host-demo --network=host nginx:latest	: To create host network 
 ```
-
-***Ip address are difference in bridge, hosh and secure network drivers.
+# Docker Bridge Networking
+```
+Ip address are difference in bridge, hosh and secure network drivers.
 Bridge is default.
 Enter into the login container enter command (ping <ip address> : to communicate) 
 of logout container to communicate with each other but when you enter finance <ip address>
-will not communicate, because finance container is secure.**
-
+will not communicate, because finance container is secure.
+```
 
 
