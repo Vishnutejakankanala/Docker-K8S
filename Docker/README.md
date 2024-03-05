@@ -1,4 +1,5 @@
-		Docker setup on linux machine		
+		Docker setup on linux machine	
+  ```
 sudo yum update		: To update os
 sudo yum install docker	: To install docker on linux
 sudo usermod -aG docker ec2-user/linux	: No need to use sudo
@@ -17,10 +18,11 @@ cat /ect/redhat-release	: To know the version
 yum install git		: To install git
 ctrl+p & ctrl+q		: To come out from container for first time
 docker ps 		: To list docker container
-
+```
 
 
 		To Create Docker File &	Image	
+```
 sudo vi <Dockerfile> 	: To create docker file
 >>> In "Dockerfile" Instructions
 >>FROM centos:7.9.2009
@@ -41,10 +43,11 @@ git --version		: check git installed or not
 java -version		: check java installed or not
 sudo docker rmi <imagename:version>	: To removie image
 sudo docker tag <imagename:version> <New name:version>	: To rename and copy the image
+```
 
 
-
-		To create Docker Container		 
+		To create Docker Container	
+ ```
 sudo docker exec -it <imageid> /bin/bash : To enter into container
 ctrl+p & ctrl+q		: To come out from container for first time
 exit			: To come out from container after time
@@ -57,10 +60,11 @@ sudo docker attach <cointainer id>	: To enter into container
 sudo docker exec -it <container id> 	: connect and run commands
 sudo docker exec <container id> ls/opt	: To run command without enter to container
 sudo docker rm <cointainer id> 		: To delete container
+```
 
 
-
-		To create Docker Registry		
+		To create Docker Registry	
+```  
 In AWS - ECR-Elastic Container Registry
 In Azure - ACR-Azure Container Registry
 
@@ -75,10 +79,11 @@ authenticate using aws cli
 docker tag <local Image Name:Version> <url from remote> : To tag
 docker push <url from remote> 	: To push local to remote
 docker pull <url in remote> 	: To download Docker image
+```
 
 
-
-			To create Volumes			
+			To create Volumes	
+```
 docker volume ls		: To list volumes
 docker volume create <name>	: To create volume
 docker volume inspect <name>	: To inspect details of volume
@@ -89,10 +94,11 @@ docker run -d --mount source=Teja,target=/app nginx:latest	: running the contain
 docker inspect <container id>	: To know details/ip address of container
 if you want to delete volume  	: Stop the container,Delete the container and Delete volume 
 docker volume rm <name>		: To delete volume
+```
 
 
-
-			Docker Networking			
+			Docker Networking	
+```
 Refer from git Repo 	: /Docker-Zero-to-Hero/examples$
 docker run -d --name login nginx:latest	: To create container
 docker exec -it login /bin/bash		: To enter into container
@@ -105,12 +111,13 @@ docker network rm <name>		: To delete network
 docker network create secure-network	: To create secure network
 docker run -d --name finance --network=secure-network nginx:latest  : to secure finance container
 docker run -d --name host-demo --network=host nginx:latest	: To create host network 
+```
 
-Ip address are difference in bridge, hosh and secure network drivers.
+***Ip address are difference in bridge, hosh and secure network drivers.
 Bridge is default.
 Enter into the login container enter command (ping <ip address> : to communicate) 
 of logout container to communicate with each other but when you enter finance <ip address>
-will not communicate, because finance container is secure.
+will not communicate, because finance container is secure.**
 
 
 
