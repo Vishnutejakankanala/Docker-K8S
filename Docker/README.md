@@ -48,7 +48,7 @@ sudo docker tag <imagename:version> <New name:version>	: To rename and copy the 
 
 # To create Docker Container	
  ```
-sudo docker exec -it <imageid> /bin/bash : To enter into container
+sudo docker exec -it <containerid> /bin/bash : To enter into container
 ctrl+p & ctrl+q		: To come out from container for first time
 exit			: To come out from container after time
 Sudo docker inspect <containerid>	: shows full info of cointainer & ip adress
