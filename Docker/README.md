@@ -58,7 +58,7 @@ sudo docker container start <containerid>: To start docker cointainer
 sudo docker run -dt <myimage:1.0>	: To create docker in detached mode
 sudo docker attach <cointainer id>	: To enter into container
 sudo docker exec -it <container id> 	: connect and run commands
-sudo docker exec <container id> ls/opt	: To run command without enter to container
+sudo docker exec <container id> ls /opt	: To run command without enter to container
 sudo docker rm <cointainer id> 		: To delete container
 ```
 
