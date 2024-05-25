@@ -2,7 +2,7 @@
   ```
 sudo yum update		: To update os
 sudo yum install docker.io	: To install docker on linux
-sudo usermod -aG docker ec2-user/linux	: No need to use sudo
+sudo usermod -aG docker ec2-user	: No need to use sudo
 systemctl is the systemd command for controlling how services start on a Linux system
 sudo systemctl status docker	: to know status of service
 systemctl start docker	: To active service
