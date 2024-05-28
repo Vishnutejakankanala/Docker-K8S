@@ -105,12 +105,15 @@ docker run -d --name login nginx:latest	: To create container
 docker exec -it login /bin/bash		: To enter into container
 apt update				: To update os
 apt install iputils-ping		: To install ping on ubuntu
+ping -v     :- to check ping is installed
 docker run -d --name logout nginx:latest: To create another container
 docker inspect <container name> 	: To check ip address/details
+ping <ip address>     : to check ip address is communicating with other container
 docker network ls			: To list networks
 docker network rm <name>		: To delete network
 docker network create secure-network	: To create secure network
 docker run -d --name finance --network=secure-network nginx:latest  : to secure finance container
+ping <ip address>     : to check ip address is communicating with other container
 docker run -d --name host-demo --network=host nginx:latest	: To create host network 
 ```
 # Docker Bridge Networking
