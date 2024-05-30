@@ -17,4 +17,6 @@ spec:
 #To create and excute service.yaml file
 # kubectl create -f service.yaml  : To create service
 # kubectl get service : To List all service Name,Type, Cluster IP & External IP
+# kubectl describe service <service-name> : To check service Name,Type, Cluster IP & External Ip.
+
 #open a new tab and enter external IP to check working or not (with :80 if not work).
