@@ -1,0 +1,30 @@
+# Important topics in yaml file
+# ---   :- This represent new document start in the same file.
+# Name is key Vishnu Teja is volume
+
+
+# Scalars   :- It represent simple values like strings, num, booleans and null.
+# scalars doesen't have any indentations.
+# (:& )colon and space is used to separate key and volume.
+Name: Vishnu Teja
+Location: Hyyderabad
+Profession: It
+
+# Lists   :- It represent hyphen(-) followed by indentation(spaces) is very important.
+# In lists each key has multipe values.
+# List can contain any combination of (key-value-pirs) sub-lists, scalars or mapping.
+Hobbies:
+ - Listen to music
+ - Reading
+ - Exploring
+
+# Mappings :- In mapping each key has one volume
+FavorateFoods:
+  Fruits: Apple
+  Drinks: Sprite
+
+# MultilineScalar :- By using pipe(|) symbol we can write multiple lines.
+whatisthifileabout: |
+ this file discuss about
+ YAML syntax and how to use it 
+
