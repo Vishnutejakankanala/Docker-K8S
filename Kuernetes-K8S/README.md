@@ -6,6 +6,7 @@
 # kubectl get namespace  : To list namespaces in the cluster
 # kubectl get pods    : To list podes in the cluster
 # kubectl get pods --namespace <namespace name>   : To check podsin Namespace
+# kubectl delete namespace <ns name> : To delete namespace 
 ```
 
 # To create and excute namespace.yaml file
@@ -15,6 +16,7 @@
 # kubectl api-resources  : To display all info about nodes/objects
 # kubectl create -f namespace.yaml  : To create namespace
 # kubectl get namespace  : To List all namespaces
+# kubectl delete namespace <ns name> : To delete namespace 
 ```
 
 # To create and excute pod.yaml file
