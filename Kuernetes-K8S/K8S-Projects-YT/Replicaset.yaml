@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: my-replicaset
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-container
+        image: nginx:latest
+        ports:
+        - containerPort: 8080
+
+
+
+#To create and excute replicaset.yaml file (rs=replicaset)
+# kubectl create -f replicaset.yaml  : To create replicaset
+# kubectl get replicaset  : To List all replicaset
+# kubectl get pods    : To list podes in the cluster
+# kubectl decribe rs/my-replicaset   : To show all info about replicaset
+# kubectl delete pod <my-replicaset-29M52>  : To delete pod
+# Deleted pod will create again due to replicaset you can increase and decrease replicaset in code
+# kubectl apply -f replicaset.yaml  : To update configure is added
+# kubectl delete rs my-replicaset   : To delete replicasets and pods. pods will not create again
