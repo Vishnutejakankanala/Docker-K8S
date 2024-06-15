@@ -19,6 +19,7 @@ spec:
 # kubectl delete pod <podname> -n devops  : To delete pod
 
 
+
 # kubectl get all -A :- To show all workloads in the cluster
 # kubectl edit deployment <deployment-name> :- To edit yaml file in live
 # kubectl get pods -w :- pod command will wait if we delete any pod.
