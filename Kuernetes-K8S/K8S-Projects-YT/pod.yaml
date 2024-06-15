@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+    - name: my-container
+      image: nginx:latest
+      ports:
+        - containerPort: 8080
+
+
+
+#To create and excute pod.yaml file
+# kubectl create -f pod.yaml  : To create pod
+# kubectl get namespace  : To List all namespaces
+# kubectl decribe pod my-pod -n devops  : To inspect pod (n=namespace)
+# kubectl get pods -namespace <namespace name>   : To check podsin Namespace
+# kubectl delete pod <podname> -n devops  : To delete pod
+
+
+# kubectl get all -A :- To show all workloads in the cluster
+# kubectl edit deployment <deployment-name> :- To edit yaml file in live
+# kubectl get pods -w :- pod command will wait if we delete any pod.
+#                        It will create automatically. we can check in live.
+# kubectl get pods -o wide  :- To show ip address and node.
+# kubectl get nods -o wide  :- To show interna and external ip address.
