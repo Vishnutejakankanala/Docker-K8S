@@ -19,5 +19,6 @@
 # <address ip> :- To get nginx webpage 
 # <address ip>/nginx :- To get nginx webpage 
 # <address ip>/httpd :- To get httpd webpage.
-# kubectl grt service -n ingress-nginx 
+# kubectl get service -n ingress-nginx
+# <address ip>/port no :- To get nginx webpage
 ````
