@@ -33,7 +33,7 @@ sudo vi <Dockerfile> 	: To create docker file
 >>#To install app directly
 >>COPY /home/ec2-user/sample.conf /opt 	: To copy sample.conf to cointainer
 
-sudo docker build	: To create docker image from docker file
+sudo docker build -t <image-name(any name for image)>	: To create docker image from docker file
 sudo docker build -t <imagename:version> <path/ .> : 
 >>> Dockerfile instructions will executive step by step
 >>>after completing of execution successfully build & tag docker images
@@ -124,5 +124,6 @@ Enter into the login container enter command (ping <ip address> : to communicate
 of logout container to communicate with each other but when you enter finance <ip address>
 will not communicate, because finance container is secure.
 ```
+
 
 
