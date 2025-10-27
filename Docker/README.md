@@ -43,6 +43,7 @@ cat /ect/redhat-release	: To check the given os
 git --version		: check git installed or not
 java -version		: check java installed or not
 sudo docker rmi <imagename:version>	: To removie image
+sudo docker rmi <image id>	: To removie image
 sudo docker tag <imagename:version> <New name:version>	: To rename and copy the image
 ```
 
@@ -124,6 +125,7 @@ Enter into the login container enter command (ping <ip address> : to communicate
 of logout container to communicate with each other but when you enter finance <ip address>
 will not communicate, because finance container is secure.
 ```
+
 
 
 
