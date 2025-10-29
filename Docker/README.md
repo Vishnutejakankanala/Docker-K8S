@@ -94,6 +94,7 @@ Refer from git Repo		: /Docker-Zero-to-Hero/examples/first-docker-file$
 docker build -t volumedemo .	: To build volume from docker file
 docker volume create Teja	: To create volume
 docker run -d --mount source=Teja,target=/app nginx:latest	: running the container with a mount
+docker ps -a --filter volume=<volume_name> :  To know which containers are attached to volumes.
 docker inspect <container id>	: To know details/ip address of container
 if you want to delete volume  	: Stop the container,Delete the container and Delete volume 
 docker volume rm <name>		: To delete volume
@@ -126,6 +127,7 @@ Enter into the login container enter command (ping <ip address> : to communicate
 of logout container to communicate with each other but when you enter finance <ip address>
 will not communicate, because finance container is secure.
 ```
+
 
 
 
